@@ -1,0 +1,81 @@
+.main-view {
+  .new_product {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .brand-content {
+    width: 100%;
+    text-align: center;
+    padding: 50px 0;
+
+    .title {
+      font-size: 2rem;
+      font-weight: 700;
+      padding: 30px 0;
+    }
+
+    .content {
+      line-height: 35px;
+      font-weight: 700;
+      color: gray;
+      padding: 50px;
+    }
+  }
+
+  .brand-metaphor {
+    width: 80%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+  .freesia {
+    display: flex;
+    width: 80%;
+    height: 600px;
+    margin: 0 auto;
+    margin-top: 30px;
+    overflow: hidden;
+    .background {
+      width: 100%;
+      justify-content: center;
+      background-image: url("../../public/images/image_1655774532125_1000.jpg");
+      background-repeat: no-repeat;
+      background-position: center 60%;
+      background-size: cover;
+      background-color: aqua;
+      
+      box-sizing: border-box;
+      transition: transform .8s;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+  .horizontal-boder {
+    padding: 1px 0;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 60px;
+
+    background-color: rgb(171, 164, 164);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .brand-metaphor {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main-view {
+    .new_product {
+      padding-top: 70px;
+    }
+  }
+}

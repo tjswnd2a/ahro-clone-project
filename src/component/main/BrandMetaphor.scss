@@ -1,0 +1,91 @@
+.ahro-written {
+  display: flex;
+
+  .product {
+    padding-right: 20px;
+    img{
+      transition: transform .5s;
+    }
+  }
+
+  .content {
+    font-weight: 700;
+    color: gray;
+    h4 {
+      font-size: 20px;
+      line-height: 30px;
+      padding-bottom: 30px;
+      color: black;
+    }
+    .line1,
+    .line2 {
+      padding-bottom: 30px;
+    }
+  }
+  &:hover {
+    .product{
+      img{
+        z-index: 1;
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+.ahro-package {
+  display: flex;
+  margin-left: 50px;
+  .product {
+    padding-right: 20px;
+    img {
+      transition: transform .5s;
+    }
+  }
+
+  .content {
+    font-weight: 700;
+    color: gray;
+    h4 {
+      font-size: 20px;
+      line-height: 30px;
+      padding-bottom: 30px;
+      color: black;
+    }
+    .line1,
+    .line2 {
+      padding-bottom: 30px;
+    }
+  }
+  &:hover {
+    .product{
+      img{
+        z-index: 1;
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .ahro-written,
+  .ahro-package {
+    display: flex;
+    justify-content: space-between;
+    .product {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      
+    }
+    .content {
+      width: 50%;
+    }
+  }
+  .ahro-package {
+    margin-left: 0;
+    padding-top: 30px;
+    
+  }
+
+  
+}
