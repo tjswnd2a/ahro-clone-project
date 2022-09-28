@@ -1,20 +1,24 @@
 import "./MainView.scss";
-import { NewProduct } from "./main/NewProduct";
-import { BrandMetaphor } from "./main/BrandMetaphor";
+import "../common.scss";
+
+import NewProduct from "./main/NewProduct";
+import BrandMetaphor from "./main/BrandMetaphor";
 import { useEffect, useState } from "react";
-import { DBload } from "../function/DBload";
+import DBload from "../function/DBload";
+import PerfumesSlide from "./main/PerfumesSlide";
 
 function MainView() {
   const [product, setProduct] = useState([]);
   useEffect(() => {
     setProduct((props) => props = DBload("FABRIC"));
-    console.log(product);
+    // console.log(product);
   }, []);
+  useEffect(() => {
+    console.log(product);
+  }, [product]);
   return (
     <section className="main-view">
-      <div className="new_product">
-        <NewProduct />
-      </div>
+      <NewProduct />
       <div className="brand-content">
         <div className="title">
           <h4>당신의 영혼에 향기를 아로새기다</h4>
@@ -28,14 +32,11 @@ function MainView() {
           </p>
         </div>
       </div>
-      <div className="brand-metaphor">
-        <BrandMetaphor />
-      </div>
+      <BrandMetaphor />
       <div className="freesia">
         <div className="background"></div>
       </div>
-
-      <div className="horizontal-boder"></div>
+      <PerfumesSlide fbr_list={product} />
     </section>
   )
 }

@@ -9,6 +9,7 @@ export default function Header() {
   const [sns, setSNS] = useState("sns");
   const [search, setSearch] = useState("search");
   const [nav, setNav] = useState("nav");
+  const [member, setMember] = useState("member");
 
   const onClick = () => {
     setMobileMenu((props) => props = ChangeMobileVer(props));
@@ -17,6 +18,7 @@ export default function Header() {
     setSNS((props) => props = ChangeMobileVer(props));
     setSearch((props) => props = ChangeMobileVer(props));
     setNav((props) => props = ChangeMobileVer(props));
+    setMember((props) => props = ChangeMobileVer(props));
   }
 
   return (
@@ -47,7 +49,7 @@ export default function Header() {
             <div className={search}>
               <span className="material-symbols-outlined">search</span>
             </div>
-            <div className="member">
+            <div className={member}>
               <span className="material-symbols-outlined">person</span>
             </div>
             <div className="shopping">

@@ -1,8 +1,9 @@
 import "./BrandMetaphor.scss";
 
-export function BrandMetaphor() {
+export default function BrandMetaphor() {
   return (
-    <>
+    <div className="brand-metaphor">
+
       <div className="ahro-written">
         <div className="product">
           <img src="./images/image1.PNG" alt="" />
@@ -44,6 +45,6 @@ export function BrandMetaphor() {
           </p>
         </div>
       </div>
-    </>
+    </div>
   );
 }

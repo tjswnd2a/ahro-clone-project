@@ -1,11 +1,4 @@
 .main-view {
-  .new_product {
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-  }
-
   .brand-content {
     width: 100%;
     text-align: center;
@@ -35,35 +28,26 @@
   .freesia {
     display: flex;
     width: 80%;
-    height: 600px;
+    height: 60vh;
     margin: 0 auto;
     margin-top: 30px;
     overflow: hidden;
     .background {
       width: 100%;
+
       justify-content: center;
       background-image: url("../../public/images/image_1655774532125_1000.jpg");
       background-repeat: no-repeat;
       background-position: center 60%;
       background-size: cover;
-      background-color: aqua;
-      
       box-sizing: border-box;
       transition: transform .8s;
       cursor: pointer;
 
       &:hover {
-        transform: scale(1.2);
+        transform: scale(1.05);
       }
     }
-  }
-  .horizontal-boder {
-    padding: 1px 0;
-    width: 80%;
-    margin: 0 auto;
-    margin-top: 60px;
-
-    background-color: rgb(171, 164, 164);
   }
 }
 

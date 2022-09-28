@@ -26,7 +26,7 @@
     .product{
       img{
         z-index: 1;
-        transform: scale(1.1);
+        transform: scale(1.05);
       }
     }
   }
@@ -60,7 +60,7 @@
     .product{
       img{
         z-index: 1;
-        transform: scale(1.1);
+        transform: scale(1.05);
       }
     }
   }
@@ -84,8 +84,30 @@
   .ahro-package {
     margin-left: 0;
     padding-top: 30px;
-    
   }
+}
 
-  
+@media screen and (max-width: 768px) {
+  .ahro-written,
+  .ahro-package {
+    flex-direction: column;
+    .content {
+      text-align: center;
+      width: 100%;
+      justify-content: center;
+    }
+    .product {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    &:hover {
+      .product{
+        img{
+          z-index: 1;
+          transform: scale(1);
+        }
+      }
+    }
+  }
 }
