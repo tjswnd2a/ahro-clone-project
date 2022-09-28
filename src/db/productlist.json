@@ -1,7 +1,7 @@
 {
   "tpye": "success",
   "message": "접속 성공",
-  "product-list" : [
+  "product" : [
     {
       "itemkind": "FABRIC",
       "itemlist" : [

@@ -1,7 +1,15 @@
 import "./MainView.scss";
 import { NewProduct } from "./main/NewProduct";
 import { BrandMetaphor } from "./main/BrandMetaphor";
+import { useEffect, useState } from "react";
+import { DBload } from "../function/DBload";
+
 function MainView() {
+  const [product, setProduct] = useState([]);
+  useEffect(() => {
+    setProduct((props) => props = DBload("FABRIC"));
+    console.log(product);
+  }, []);
   return (
     <section className="main-view">
       <div className="new_product">
