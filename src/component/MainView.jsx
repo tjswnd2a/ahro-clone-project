@@ -6,9 +6,11 @@ import BrandMetaphor from "./main/BrandMetaphor";
 import { useEffect, useState } from "react";
 import DBload from "../function/DBload";
 import PerfumesSlide from "./main/PerfumesSlide";
+import ImageSet from "./main/ImageSet";
 
 function MainView() {
   const [product, setProduct] = useState([]);
+  const [imgright, setImgright] = useState(true);
   useEffect(() => {
     setProduct((props) => props = DBload("FABRIC"));
     // console.log(product);
@@ -34,9 +36,21 @@ function MainView() {
       </div>
       <BrandMetaphor />
       <div className="freesia">
-        <div className="background"></div>
+        <img src="./images/image_1655774532125_1000.jpg" alt="" />
       </div>
       <PerfumesSlide fbr_list={product} />
+
+      {product.map((item) => {
+        if (item.popularity === true) {
+          <ImageSet
+            img={item.img2}
+            name={item.name}
+            content={item.content}
+            right={imgright}
+          />
+        }
+        // setImgright((prop) => !prop);
+      })}
     </section>
   )
 }

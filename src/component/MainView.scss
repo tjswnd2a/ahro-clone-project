@@ -26,28 +26,31 @@
   }
 
   .freesia {
-    display: flex;
+    position: relative;
     width: 80%;
-    height: 60vh;
+    height: auto;
     margin: 0 auto;
+    background-color: orange;
     margin-top: 30px;
     overflow: hidden;
-    .background {
+    img {
+      position: absolute;
       width: 100%;
-
-      justify-content: center;
-      background-image: url("../../public/images/image_1655774532125_1000.jpg");
-      background-repeat: no-repeat;
-      background-position: center 60%;
-      background-size: cover;
-      box-sizing: border-box;
-      transition: transform .8s;
-      cursor: pointer;
-
+      height: 100%;
+      object-fit: cover;
+      object-position: center 60%;
+      transition: transform .5s;
       &:hover {
         transform: scale(1.05);
       }
     }
+    
+    &:after {
+      content: "";
+      display: block;
+      padding-bottom: 35%;
+    }
+    
   }
 }
 

@@ -17,11 +17,21 @@ export default function PerfumesSlide({ fbr_list }) {
       <Swiper
         className="swiper"
         spaceBetween={10}
-        slidesPerView={5}
+        // slidesPerView={5}
         autoplay={{ delay: 3000 }}
         navigation
         loop="ture"
-
+        breakpoints={{
+          480: {
+            slidesPerView: 2
+          },
+          768: {
+            slidesPerView: 3
+          },
+          1024: {
+            slidesPerView: 5
+          }
+        }}
       >
         {fbr_list.map((item) =>
           <SwiperSlide className="swiper-slide">

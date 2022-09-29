@@ -1,7 +1,6 @@
 import "./PerfumesItem.scss";
 
 export default function PerfumesItem({ img, name, price }) {
-  console.log(price);
   return (
     <div className="item-img">
       <img src={img} alt="" />
