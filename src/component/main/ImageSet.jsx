@@ -1,18 +1,28 @@
-export default function ImageSet({ img, name, content, img_right }) {
-  console.log(name);
+import { useEffect, useState } from "react";
+import "./ImageSet.scss";
+export default function ImageSet({ fabric }) {
+
   return (
     <div className="popular">
-      {img_right ?
-        <div className="popular-product-R">
+      {(fabric.popular_number % 2 === 0) ?
+        (<div className="popular-product-L">
+          <div className="product-img">
+            <img src={fabric.img2} alt="" />
+          </div>
           <div className="detail">
-            <div className="name">{name}</div>
-            <div className="content">{content}</div>
+            <div className="name">{fabric.name}</div>
+            <div className="content">{fabric.content}</div>
+          </div>
+        </div>)
+        : (<div className="popular-product-R">
+          <div className="detail">
+            <div className="name">{fabric.name}</div>
+            <div className="content">{fabric.content}</div>
           </div>
           <div className="product-img">
-            <img src={img} alt="" />
+            <img src={fabric.img2} alt="" />
           </div>
-        </div>
-        : null}
+        </div>)}
     </div>
   );
 }

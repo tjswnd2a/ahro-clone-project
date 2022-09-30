@@ -4,20 +4,26 @@ import "../common.scss";
 import NewProduct from "./main/NewProduct";
 import BrandMetaphor from "./main/BrandMetaphor";
 import { useEffect, useState } from "react";
-import DBload from "../function/DBload";
+import { DBload, PopItemLoad } from "../function/DBload";
 import PerfumesSlide from "./main/PerfumesSlide";
 import ImageSet from "./main/ImageSet";
+import Instagram from "./main/Instagram";
 
 function MainView() {
   const [product, setProduct] = useState([]);
-  const [imgright, setImgright] = useState(true);
+  const [toggle, setToggle] = useState(false);
   useEffect(() => {
     setProduct((props) => props = DBload("FABRIC"));
-    // console.log(product);
   }, []);
-  useEffect(() => {
-    console.log(product);
-  }, [product]);
+
+  const ImgDirection = () => {
+    setToggle(!toggle);
+    return toggle;
+  }
+  // function ImgDirection() {
+  //   setToggle(!toggle);
+  //   return toggle;
+  // }
   return (
     <section className="main-view">
       <NewProduct />
@@ -40,17 +46,12 @@ function MainView() {
       </div>
       <PerfumesSlide fbr_list={product} />
 
-      {product.map((item) => {
-        if (item.popularity === true) {
-          <ImageSet
-            img={item.img2}
-            name={item.name}
-            content={item.content}
-            right={imgright}
-          />
-        }
-        // setImgright((prop) => !prop);
-      })}
+      {product.map((item) =>
+        item.popularity ?
+          (<ImageSet fabric={item} />) : null
+      )}
+      <Instagram />
+
     </section>
   )
 }

@@ -1,7 +1,7 @@
 import itemData from '../db/productlist.json';
 
 //항목을 불러오는 함수
-export default function DBload(item) {
+export function DBload(item) {
   let itemArr = itemData['product']
     .filter( (db) => {
       return db.itemkind === item;
@@ -12,4 +12,17 @@ export default function DBload(item) {
 
     // console.log(itemArr.itemlist);
   return itemArr.itemlist;
+}
+
+export function PopItemLoad(item) {
+  let itemArr = itemData['product']
+    .filter( (db) => {
+      return db.itemlist.popularity === true;
+    })
+    .find( (db) => {
+      return db;
+    });
+
+    console.log(itemArr);
+  return itemArr;
 }

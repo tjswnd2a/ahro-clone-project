@@ -13,7 +13,7 @@
           "current_price": "53,100원",
           "previous_price": "59,000원",
           "grade": 4,
-          "popularity": "false"
+          "popularity": false
         },
         {
           "id": "FBC001",
@@ -23,19 +23,20 @@
           "current_price": "53,100원",
           "previous_price": "59,000원",
           "grade": 5,
-          "popularity": "false"
+          "popularity": false
 
         },
         {
           "id": "FBC002",
           "name": "Knitty hug",
           "img": "./images/image_1644543878606_2500.jpg",
-          "img2": "./images/image3.jpg",
+          "img2": "./images/image3.PNG",
           "content": "따뜻하고 포근한 니트향을 입어요, 향수 Knitty hug",
           "current_price": "53,100원",
           "previous_price": "59,000원",
           "grade": 5,
-          "popularity": "true"
+          "popular_number": 1,
+          "popularity": true
 
         },
         {
@@ -46,42 +47,45 @@
           "current_price": "53,100원",
           "previous_price": "59,000원",
           "grade": 4,
-          "popularity": "false"
+          "popularity": false
         },
         {
           "id": "FBC004",
           "name": "Orange greenwood",
           "img": "./images/image_1607760874300_2500.jpg",
-          "img2": "./images/greenwood.jpg",
+          "img2": "./images/greenwood.PNG",
           "content": "불안과 우울을 잠재우는 오렌지숲 향 향수 오렌지 그린우드",
           "current_price": "53,100원",
           "previous_price": "59,000원",
           "grade": 5,
-          "popularity": "true"
+          "popular_number": 2,
+          "popularity": true
 
         },
         {
           "id": "FBC005",
           "name": "like lilac",
           "img": "./images/image_1626487182364_2500.jpg",
-          "img2": "./images/lilac.jpg",
+          "img2": "./images/lilac.PNG",
           "content": "라일락을 사랑하는 당신에게 라일락향수 like lilac",
           "current_price": "53,100원",
           "previous_price": "59,000원",
           "grade": 5,
-          "popularity": "true"
+          "popular_number": 3,
+          "popularity": true
 
         },
         {
           "id": "FBC006",
           "name": "Blooming Scents Set",
           "img": "./images/image_1587719618996_2500.jpg",
-          "img2": "./images/blooming.jpg",
+          "img2": "./images/blooming.PNG",
           "content": "봄꽃향기 가득, 프리지아+라일락 향수 세트",
           "current_price": "49,500원",
           "previous_price": "59,000원",
           "grade": 4,
-          "popularity": "true"
+          "popular_number": 4,
+          "popularity": true
 
         },
         {
@@ -92,8 +96,7 @@
           "current_price": "49,500원",
           "previous_price": "59,000원",
           "grade": 5,
-          "popularity": "true"
-
+          "popularity": false
         }
       ]
     }
