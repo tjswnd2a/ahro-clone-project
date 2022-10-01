@@ -6,11 +6,7 @@ export default function ImageSet({ fabric }) {
   // const animationItem = useScrollFadeIn();
   return (
     <div className="popular">
-      <Link to={`/product/${fabric.id}`} state={
-        {
-          item: fabric
-
-        }}>
+      <Link to={`/product/${fabric.id}`} state={{ item: fabric }}>
         {(fabric.popular_number % 2 === 0) ?
           (<div className="popular-product-L">
             <div className="product-img">

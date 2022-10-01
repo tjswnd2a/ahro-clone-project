@@ -26,14 +26,14 @@ export default function Header() {
       <div className="inner">
         <div className={logo}>
           <a href="/">
-            <img src="./images/logo.jpg" alt="" />
+            <img src="/images/logo.jpg" alt="" />
           </a>
         </div>
         <div className={nav}>
           <div className={sns}>
-            <img src="./images/facebook-app-symbol.png" alt="" />
-            <img src="./images/instagram.png" alt="" />
-            <img src="./images/b.png" alt="" />
+            <img src="/images/facebook-app-symbol.png" alt="" />
+            <img src="/images/instagram.png" alt="" />
+            <img src="/images/b.png" alt="" />
           </div>
           <div className={menu_list}>
             <ul className="menu">
