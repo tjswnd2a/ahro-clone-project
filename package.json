@@ -12,6 +12,7 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.1",
     "react-scripts": "5.0.1",
+    "react-scroll-motion": "^0.3.0",
     "sass": "^1.55.0",
     "sass-loader": "^13.0.2",
     "swiper": "^8.4.2",
