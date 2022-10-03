@@ -9,7 +9,6 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 export default function PerfumesSlide({ fbr_list }) {
-  console.log(fbr_list);
   return (
     <div className="perfumes">
       <div className="title">

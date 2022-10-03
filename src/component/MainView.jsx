@@ -1,32 +1,25 @@
 import "./MainView.scss";
 import "../common.scss";
-
+import { Link } from "react-router-dom";
 import NewProduct from "./main/NewProduct";
 import BrandMetaphor from "./main/BrandMetaphor";
 import { useEffect, useState } from "react";
-import { DBload, PopItemLoad } from "../function/DBload";
+import { DBload, RecommendProduct } from "../function/DBload";
 import PerfumesSlide from "./main/PerfumesSlide";
 import ImageSet from "./main/ImageSet";
 import Instagram from "./main/Instagram";
 
 function MainView() {
   const [product, setProduct] = useState([]);
-  const [toggle, setToggle] = useState(false);
+  const [fabric, setFabic] = useState([]);
   useEffect(() => {
     setProduct((props) => props = DBload("FABRIC"));
+    setFabic((props) => props = RecommendProduct("FBC000"));
   }, []);
 
-  const ImgDirection = () => {
-    setToggle(!toggle);
-    return toggle;
-  }
-  // function ImgDirection() {
-  //   setToggle(!toggle);
-  //   return toggle;
-  // }
   return (
     <section className="main-view">
-      <NewProduct />
+      <NewProduct product={fabric} />
       <div className="brand-content">
         <div className="title">
           <h4>당신의 영혼에 향기를 아로새기다</h4>

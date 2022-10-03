@@ -10,6 +10,9 @@ export default function ProductPage() {
   const [content, setContent] = useState("");
   const [itemImg, setItemImg] = useState("");
   const [grade, setGrade] = useState(0);
+
+  const [counter, setCounter] = useState(1);
+  const [total_mount, setMount] = useState(0);
   useEffect(() => {
     console.log(location.state.item.img);
 
@@ -21,6 +24,23 @@ export default function ProductPage() {
     setGrade(location.state.item.grade);
 
   }, [])
+
+  const onClickDown= () => {
+    if( counter > 1 ){
+      setCounter( (current) => current -= 1 );
+    }
+  }
+  const onClickUp= () => {
+    setCounter( (current) => current += 1 );
+
+  }
+  useEffect(() => {
+    setMount((prop) => prop = price);
+  }, [price])
+  useEffect(() => {
+    setMount((prop) => prop = price * counter);
+  }, [counter])
+
   const rendering = () => {
     const result = [];
     for (let i = 0; i < 5; i++) {
@@ -46,7 +66,7 @@ export default function ProductPage() {
           {rendering()}
         </div>
         <div className="price">
-          <div className="current">{price}</div>
+          <div className="current">{price}원</div>
           <div className="previous">{previous}</div>
         </div>
         <div className="content">{content}</div>
@@ -59,15 +79,20 @@ export default function ProductPage() {
         </div>
         <div className="counter">
           <h4>수량</h4>
+          <div className="up-down">
+            <div className="down" onClick={onClickDown}>-</div>
+            <div className="sum-total">{counter}</div>
+            <div className="up" onClick={onClickUp}>+</div>
+          </div>
         </div>
         <div className="result">
           <div className="order-number">
             <h4>주문 수량</h4>
-            <p>1개</p>
+            <p>{counter}개</p>
           </div>
           <div className="result-pay">
             <h4>총 상품 금액</h4>
-            <p>{price}</p>
+            <p>{total_mount}원</p>
           </div>
           <div className="btn">
             <button className="puchase-btn">구매 하기</button>
